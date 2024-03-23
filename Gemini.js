@@ -15,7 +15,7 @@ async function runChat(message) {
     console.log("from message", message, process.env.GEMINI_API_KEY);
      var myMessage = message;
     if (!message) {
-        myMessage = 'Hello Gemini!'
+        myMessage = 'Hello Assistant!'
     }
    
   const genAI = new GoogleGenerativeAI(API_KEY);
