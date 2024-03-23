@@ -6,12 +6,13 @@ const {
   HarmCategory,
   HarmBlockThreshold,
 } = require("@google/generative-ai");
+require("dotenv").config();
 
 const MODEL_NAME = "gemini-1.0-pro";
 const API_KEY = process.env.GEMINI_API_KEY;
 
 async function runChat(message) {
-    console.log('from message', message)
+    console.log("from message", message, process.env.GEMINI_API_KEY);
      var myMessage = message;
     if (!message) {
         myMessage = 'Hello Gemini!'
